@@ -23,3 +23,7 @@ console.log('Burası master dalı')
 
 
 
+console.log('Burası da yeniOzellik dalı')
+// 
+//
+// özellik tamamlandı ve test edildi.
