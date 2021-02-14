@@ -27,3 +27,5 @@ console.log('Burası da yeniOzellik dalı')
 // 
 //
 // özellik tamamlandı ve test edildi.
+
+
