@@ -18,4 +18,8 @@ console.log(((1 == 1) || (1 > 2)) && !(1 > 10))
 
 console.log('Hello World!')
 
+console.log('Burası master dalı')
+
+
+
 
