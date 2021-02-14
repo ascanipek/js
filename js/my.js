@@ -20,7 +20,7 @@ console.log('Hello World!')
 
 console.log('Burası master dalı')
 
-
+// yeni özellikle ilgili....
 
 
 console.log('Burası da yeniOzellik dalı')
