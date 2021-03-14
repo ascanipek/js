@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Döviz Kurları Uygulaması</title>
+    
+</head>
+<body>
+        <div class="container">
+            <nav>
+                <div class="nav-wrapper">
+                  <a href="#" class="brand-logo" style="margin-left: 10px;">Currency Exchange APP</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                  </ul>
+                </div>
+              </nav>
+                <div class="row">
+                    <div class="col s12">
+                        <div id="main" class="card">
+                            <div class="card-content">
+                                <span class="card-title">Döviz Kurları Uygulaması</span>
+                                <div class="row">
+                                    <form id="currency-form"></form>
+                                        <div class="input-field col s12">
+                                            <input type="number" name = "amount" id = "amount" placeholder="Miktar">
+                                            
+                                        </div>
+
+                                        <div class="input-field col s12">
+                                                <select id = "firstCurrency">
+                                                  
+                                                    <option selected>USD</option>
+                                                    <option>EUR</option>
+                                                    <option>JPY</option>
+                                                    <option>BGN</option>
+                                                    <option>CZK</option>
+                                                    <option>DKK</option>
+                                                    <option>GBP</option>          
+                                                    <option>HUF</option>
+                                                    <option>PLN</option>
+                                                    <option>RON</option>
+                                                    <option>SEK</option>
+                                                    <option>CHF</option>
+                                                    <option>ISK</option>
+                                                    <option>NOK</option>          
+                                                    <option>HRK</option>
+                                                    <option>RUB</option>
+                                                    <option>TRY</option>
+                                                    <option>AUD</option>
+                                                    <option>BRL</option>          
+                                                    <option>CAD</option>
+                                                    <option>CNY</option>
+                                                    <option>HKD</option>
+                                                    <option>IDR</option>          
+                                                    <option>ILS</option>
+                                                    <option>INR</option>
+                                                    <option>KRW</option>
+                                                    <option>MXN</option>          
+                                                    <option>MYR</option>
+                                                    <option>NZD</option>
+                                                    <option>PHP</option>
+                                                    <option>SGD</option>
+                                                    <option>THB</option>          
+                                                    <option>ZAR</option>
+                                                </select>
+
+                                                <select id = "secondCurrency">
+                                                  
+                                                    <option>USD</option>
+                                                    <option>EUR</option>
+                                                    <option>JPY</option>
+                                                    <option>BGN</option>
+                                                    <option>CZK</option>
+                                                    <option>DKK</option>
+                                                    <option>GBP</option>          
+                                                    <option>HUF</option>
+                                                    <option>PLN</option>
+                                                    <option>RON</option>
+                                                    <option>SEK</option>
+                                                    <option>CHF</option>
+                                                    <option>ISK</option>
+                                                    <option>NOK</option>          
+                                                    <option>HRK</option>
+                                                    <option>RUB</option>
+                                                    <option selected>TRY</option>
+                                                    <option>AUD</option>
+                                                    <option>BRL</option>          
+                                                    <option>CAD</option>
+                                                    <option>CNY</option>
+                                                    <option>HKD</option>
+                                                    <option>IDR</option>          
+                                                    <option>ILS</option>
+                                                    <option>INR</option>
+                                                    <option>KRW</option>
+                                                    <option>MXN</option>          
+                                                    <option>MYR</option>
+                                                    <option>NZD</option>
+                                                    <option>PHP</option>
+                                                    <option>SGD</option>
+                                                    <option>THB</option>          
+                                                    <option>ZAR</option>
+                                                </select>
+                                                
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" style="padding-top: 20px;">
+                              
+                              <span class="card-title" style="padding: 20px;" id = "outputFirst">USD</span>
+                              <span>-</span>
+                              <span class="card-title" style="padding: 20px;" id = "outputSecond">TRY</span>
+                              
+                            </div>
+                            <div class="card-content">
+                                <input type="text"  name = "outputResult" id = "outputResult" placeholder = "Sonuç" readonly >
+
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                
+  
+        </div>
+        
+    
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems);
+              });
+    </script>
+
+    <!-- <script src="ui.js"></script> -->
+    <script src="currency.js"></script>
+   
+</body>
+
+<script>
+    // let rates = null
+    // function getData(base){
+    //     fetch("https://api.exchangeratesapi.io/latest?base=" + base )
+    //     .then(response => response.json())
+    //     .then(data => {rates = data.rates})
+    // }
+
+    // getData('USD')
+    // setTimeout(function(){
+    //     console.log(rates)
+    // }, 3000)
+
+
+
+</script>
+
+
+
+
+</html>
