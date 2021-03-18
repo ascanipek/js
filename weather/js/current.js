@@ -1,7 +1,7 @@
 let data
 let city = 'istanbul'
 
-fetch('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=0a37e45a7316753630171c74608e2160&units=metric&lang=tr')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=0a37e45a7316753630171c74608e2160&units=metric&lang=tr')
     .then(res => {
         return res.json()
     })
@@ -28,7 +28,7 @@ fetch('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=0a37e
 
     
 function getData(sehir){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + sehir + '&appid=0a37e45a7316753630171c74608e2160&units=metric&lang=tr')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + sehir + '&appid=0a37e45a7316753630171c74608e2160&units=metric&lang=tr')
     .then(res => {
         return res.json()
     })
