@@ -57,3 +57,13 @@ function hesapla(){
 }
 
 
+const car = {
+    marka: "BMW",
+    motor: '2.0',
+
+}
+
+car.marka = "Mercedes"
+
+
+
