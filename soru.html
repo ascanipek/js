@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [7,2,3,4,5,6,1,8,9]
+
+    let arr2 = [
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+        [1,2,3,4,5,6,7,8,9],
+    ]
+
+    // console.log(arr2[2][4])
+
+    function ukodus(entry){
+        for(let k=0; k<9; k++){ // satırlar için 
+            if(entry[k].length !== 9)
+                return "Hata"
+            else{
+                let res = []
+                for(let j=1; j<=9;j++){ // 1-9 olan sayıları kontrol için
+                    let count = 0
+                    for(let i=0; i<=8; i++){ // sütunlar için 
+                        if(entry[k][i] == j)
+                            count++
+                    }
+                    if(count != 1)
+                        return "Yanlış"
+                    res.push(count)
+                }
+                // return res
+            }
+        }
+        return "Doğru"
+    }
+
+   
+    console.log(ukodus(arr2))
+    // console.log(ukodus(arr2))
+</script>
+</html>
