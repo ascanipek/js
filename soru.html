@@ -49,7 +49,19 @@
     }
 
    
-    console.log(ukodus(arr2))
     // console.log(ukodus(arr2))
+    // console.log(ukodus(arr2))
+
+    function galata(n){
+        for(let i=0; i<=110; i++)
+            for(let j=0; j<=91; j++)
+                if(n == (i * 9) + (j * 11)){
+                    console.log(i, j)
+                    return "Koş"
+                }    
+        return "Zıpla"
+    }
+    console.log(galata(998))
+
 </script>
 </html>
