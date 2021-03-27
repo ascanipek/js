@@ -22,8 +22,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=0a37
         console.log(today)
         document.querySelector('#day').innerHTML = tarih[0]
         document.querySelector('#date').innerHTML = today
-
-
     })
 
     
